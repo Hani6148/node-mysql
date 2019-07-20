@@ -55,10 +55,15 @@ function startApp(){
                         }
                         return false;
                       }
+                },{
+                    name:"yes",
+        type:"confirm",
+        message: "do you confirm ?",
+        default:true
                 }
 
             ]).then(function(data){
-
+             if(data.yes){
                 for (i=0; i<res.length;i++){
                     if (res[i].item_id==data.id){
                         ourItem=res[i].item_id;
@@ -71,7 +76,10 @@ function startApp(){
                    
                 }
                 
-
+            }
+            else{
+                startApp();
+            }
             })
     })
 }
@@ -80,7 +88,7 @@ function makeOrder(ourItem,ourqty,stock,price){
     if(ourqty>stock){
         console.log("the amount of items available is insufficient");
 
-        startApp();
+        restartApp();
     }
     else{
         newqty=stock-ourqty;
@@ -96,7 +104,7 @@ function restartApp(){
     inquirer.prompt({
         name:"restart",
         type:"confirm",
-        message: "do you want to restart:",
+        message: "do you want to make another purchase:",
         default:true
     }).then(function(data){
     if(data.restart){
