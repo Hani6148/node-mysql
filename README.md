@@ -40,7 +40,7 @@ To connect to the DB we use the **connect** methode :
 
 when the App starts we will first display the available product from the bamazon DB using the following commands (note that the app starts when we establish the connection with the DB by calling the  **startApp()** Function) :
 
-![Screenshot](.\captures\displayproduct.png)
+![Screenshot](captures/displayproduct.png)
 
 we will then use the inquirer package to prompt the user into entering the id and the quantity of the product he wants to purchase.
 
