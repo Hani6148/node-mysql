@@ -11,7 +11,7 @@ in this node js App we used MYSQL and inquirer packages, and MYSQL WORKBENCH to 
 
 ### 1 Creating the bamazon database:
 the following screenshot shows the command used to create the bamazon database as well as the product table
-![alt text](captures/CaptureDBcreation.png)
+![alt text](captures/CaptureDBcreation.jpg)
 
 ![Screenshot](captures/CaptureDBcreation.png)
 
